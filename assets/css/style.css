@@ -24,6 +24,7 @@
 html {
   margin: 0;
   box-sizing: border-box;
+  min-height: 100vh;
 }
 
 body {
@@ -37,7 +38,6 @@ body {
   padding-top: 10px;
   padding-bottom: 10px;
   max-width: 400px;
-  box-shadow: 5px 5px 5px var(--shadow-color);
 }
 
 .wrapper span {
@@ -133,21 +133,21 @@ body {
 .todolist {
   list-style: none;
   padding: 0;
+  margin-top: 10px;
 }
 
 .todolist p {
   padding-top: 10px;
+  margin-top: 30px;
 }
 
 .todolist li {
   display: flex;
-  margin-left: 30px;
-  justify-content: center;
-  padding: var(--space-size-small);
+  padding: 10px 0 10px 0;
 }
 
 .todolist li .todo {
-  width: 300px;
+  width: 260px;
   height: 30px;
   margin-left: var(--space-size-small);
   padding: var(--space-size-small);
@@ -158,9 +158,29 @@ body {
   box-shadow: 5px 5px 5px var(--shadow-color);
 }
 
+.todolist li #check {
+  border: 0;
+  padding: 0;
+  margin-left: 10px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.todolist li #check i {
+  font-size: var(--font-size);
+  color: var(--color-orange);
+}
+
 .todolist li #delete {
   position: relative;
-  left: -30px;
+  left: -40px;
+  border: 0;
+  padding: 0;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.todolist li #delete i {
+  font-size: var(--font-size);
+  color: var(--color-orange);
 }
 
 .input_todo {
