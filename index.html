@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>To Do List🕓</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Single+Day&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="fontello/fontello-embedded.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <script src="assets/js/clock.js" defer></script>
   <script src="assets/js/date.js" defer></script>
@@ -13,6 +16,41 @@
   <script src="assets/js/weather.js" defer></script>
 </head>
 <body>
-  
+  <div class="wrapper">
+    <span>TO DO LIST</span>
+    <p></p>
+    <form class="name">
+      <input type="text" placeholder="이름을 입력하세요">
+    </form>
+    <div class="info">
+      <div class="date">
+        <h3>2021</h3>
+        <h2>1/1</h2>
+      </div>
+      <div class="weather"></div>
+      <div class="clock">
+        <h1>00:00</h1>
+      </div>
+    </div>
+    <div class="container">
+      <ul class="todolist">
+        <p></p>
+        <li>
+          <input type="checkbox">
+          <div class="todo"></div>
+          <input id="delete" type="image" src="" alt="X">
+        </li>
+        <li>
+          <input type="checkbox">
+          <div class="todo"></div>
+          <input id="delete" type="image" src="" alt="X">
+        </li>
+      </ul>
+      <form class="input_todo">
+        <input id="input" type="text" placeholder="해야할 일을 적으세요">
+        <input id="btn" type="submit" value="입력">
+      </form>
+    </div>
+  </div>
 </body>
 </html>

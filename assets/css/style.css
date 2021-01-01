@@ -1,7 +1,192 @@
+:root {
+  /*Color*/
+  --color-orange: #e55039;
+  --color-dopain: #60a3bc;
+  --color-beige: #fad390;
+  --color-white: #f5f6fa;
+  --color-black: #353b48;
+  --color-grey: #dcdde1;
+  --shadow-color: rgba(0, 0, 0, 0.2);
+  /*Size*/
+  --main-font-size: 30px;
+  --font-size: 24px;
+  --btn-font-size: 18px;
+  --border-size: 4px;
+  --thum-size: 50px;
+  --info-size: 80px;
+  --space-size: 30px;
+  --space-size-small: 10px;
+  --border-radius: 7px;
+  /*font*/
+  --font-singleday: 'Single Day', cursive;
+}
+
 html {
   margin: 0;
+  box-sizing: border-box;
 }
 
 body {
   margin: 0;
+  padding-top: 100px;
+}
+
+.wrapper {
+  background-color: var(--color-dopain);
+  margin: 0 auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  max-width: 400px;
+  box-shadow: 5px 5px 5px var(--shadow-color);
+}
+
+.wrapper span {
+  font-family: var(--font-singleday);
+  font-size: var(--main-font-size);
+  text-align: center;
+  display: block;
+  margin-top: 20px;
+}
+
+.wrapper .name input {
+  width: 300px;
+  display: block;
+  margin: 30px auto;
+  padding: 10px;
+  border: 0;
+  border-radius: var(--border-radius);
+  font-size: var(--btn-font-size);
+  text-align: left;
+  box-shadow: 5px 5px 5px var(--shadow-color);
+  font-family: var(--font-singleday);
+}
+
+.wrapper .info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wrapper .info .date {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: var(--space-size);
+  background-color: var(--color-beige);
+  border-radius: var(--border-radius);
+  box-shadow: 5px 5px 5px var(--shadow-color);
+  padding: var(--space-size-small);
+  width: var(--info-size);
+  height: var(--info-size);
+}
+
+.date h3 {
+  font-size: var(--font-size);
+  color: var(--color-orange);
+  text-align: center;
+  margin: 0;
+  font-family: var(--font-singleday);
+}
+
+.date h2 {
+  margin: 0;
+  font-size: var(--main-font-size);
+  color: var(--color-black);
+  text-align: center;
+  font-family: var(--font-singleday);
+}
+
+.wrapper .info .weather {
+  width: var(--info-size);
+  height: var(--info-size);
+  padding: var(--space-size-small);
+  background-color: var(--color-beige);
+  border-radius: var(--border-radius);
+  box-shadow: 5px 5px 5px var(--shadow-color);
+}
+
+.wrapper .info .clock {
+  width: var(--info-size);
+  height: var(--info-size);
+  padding: var(--space-size-small);
+  margin-right: var(--space-size);
+  background-color: var(--color-beige);
+  border-radius: var(--border-radius);
+  box-shadow: 5px 5px 5px var(--shadow-color);
+}
+
+.wrapper .info .clock h1 {
+  font-size: var(--main-font-size);
+  color: var(--color-orange);
+  font-family: var(--font-singleday);
+}
+
+.container {
+  background-color: var(--color-beige);
+  border-radius: var(--border-radius);
+  display: block;
+  margin: 20px auto;
+  width: 350px;
+  box-shadow: 5px 5px 5px var(--shadow-color);
+}
+
+.todolist {
+  list-style: none;
+  padding: 0;
+}
+
+.todolist p {
+  padding-top: 10px;
+}
+
+.todolist li {
+  display: flex;
+  margin-left: 30px;
+  justify-content: center;
+  padding: var(--space-size-small);
+}
+
+.todolist li .todo {
+  width: 300px;
+  height: 30px;
+  margin-left: var(--space-size-small);
+  padding: var(--space-size-small);
+  background-color: var(--color-white);
+  font-size: var(--font-size);
+  font-family: var(--font-singleday);
+  border-radius: var(--border-radius);
+  box-shadow: 5px 5px 5px var(--shadow-color);
+}
+
+.todolist li #delete {
+  position: relative;
+  left: -30px;
+}
+
+.input_todo {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.input_todo #input {
+  width: 250px;
+  padding: var(--space-size-small);
+  font-size: var(--btn-font-size);
+  font-family: var(--font-singleday);
+  border: 0px;
+  border-radius: var(--border-radius);
+  box-shadow: 5px 5px 5px var(--shadow-color);
+}
+
+.input_todo #btn {
+  box-shadow: 5px 5px 5px var(--shadow-color);
+  border: 0;
+  font-size: var(--btn-font-size);
+  font-family: var(--font-singleday);
+  border-radius: var(--border-radius);
+  background-color: var(--color-orange);
+  margin-left: var(--space-size-small);
+  color: var(--color-white);
 }

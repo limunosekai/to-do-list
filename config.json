@@ -1,0 +1,40 @@
+{
+  "name": "",
+  "css_prefix_text": "icon-",
+  "css_use_suffix": false,
+  "hinting": true,
+  "units_per_em": 1000,
+  "ascent": 850,
+  "glyphs": [
+    {
+      "uid": "43ab845088317bd348dee1d975700c48",
+      "css": "ok-circled",
+      "code": 59392,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "422e07e5afb80258a9c4ed1706498f8a",
+      "css": "circle-empty",
+      "code": 61708,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "31562b831ad0016b89ddf9693214041f",
+      "css": "hand-peace-o",
+      "code": 62043,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "3327862df439988139b61814143b7a42",
+      "css": "cancel-circled",
+      "code": 59393,
+      "src": "typicons"
+    },
+    {
+      "uid": "5c49851100aa021825b346d16d7f3abf",
+      "css": "temperatire",
+      "code": 59394,
+      "src": "typicons"
+    }
+  ]
+}
