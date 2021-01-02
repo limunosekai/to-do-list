@@ -8,7 +8,7 @@
   --color-grey: #dcdde1;
   --shadow-color: rgba(0, 0, 0, 0.2);
   /*Size*/
-  --main-font-size: 30px;
+  --main-font-size: 33px;
   --font-size: 24px;
   --btn-font-size: 18px;
   --border-size: 4px;
@@ -19,6 +19,7 @@
   --border-radius: 7px;
   /*font*/
   --font-singleday: 'Single Day', cursive;
+  --font-indieflower: 'Indie Flower', cursive;
 }
 
 html {
@@ -40,8 +41,8 @@ body {
   max-width: 400px;
 }
 
-.wrapper span {
-  font-family: var(--font-singleday);
+.wrapper .title {
+  font-family: var(--font-indieflower);
   font-size: var(--main-font-size);
   text-align: center;
   display: block;
@@ -49,6 +50,10 @@ body {
 }
 
 .wrapper .name input {
+  display: none;
+}
+
+.wrapper .name .showing {
   width: 300px;
   display: block;
   margin: 30px auto;
@@ -59,6 +64,29 @@ body {
   text-align: left;
   box-shadow: 5px 5px 5px var(--shadow-color);
   font-family: var(--font-singleday);
+}
+
+.wrapper span {
+  display: none;
+}
+
+.wrapper .show {
+  display: block;
+  background-color: rgba(255, 255, 255, 0.3);
+  font-family: var(--font-singleday);
+  font-size: var(--font-size);
+  text-align: center;
+  margin-bottom: var(--space-size);
+  animation: fadeIn 0.5s linear;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .wrapper .info {
@@ -81,19 +109,19 @@ body {
 }
 
 .date h3 {
-  font-size: var(--font-size);
   color: var(--color-orange);
-  text-align: center;
   margin: 0;
-  font-family: var(--font-singleday);
+  text-align: center;
+  font-size: var(--font-size);
+  font-family: var(--font-indieflower);
 }
 
 .date h2 {
-  margin: 0;
-  font-size: var(--main-font-size);
   color: var(--color-black);
+  margin: 0;
   text-align: center;
-  font-family: var(--font-singleday);
+  font-size: var(--main-font-size);
+  font-family: var(--font-indieflower);
 }
 
 .wrapper .info .weather {
@@ -118,7 +146,9 @@ body {
 .wrapper .info .clock h1 {
   font-size: var(--main-font-size);
   color: var(--color-orange);
-  font-family: var(--font-singleday);
+  font-family: var(--font-indieflower);
+  text-align: center;
+  margin: 15px 0 0 0;
 }
 
 .container {
