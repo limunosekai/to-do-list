@@ -9,7 +9,6 @@ function getWeather(lati, longi) {
   .then(response => {
     return response.json()
   }).then(function(json) {
-    console.log(json);
     const temp = json.main.temp;
     const weatherCondition = json.weather[0].description;
     weatherData.innerText = `${temp} °C ${weatherCondition}`
