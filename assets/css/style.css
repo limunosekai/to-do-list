@@ -133,6 +133,15 @@ body {
   box-shadow: 5px 5px 5px var(--shadow-color);
 }
 
+.wrapper .info .weather .weatherData {
+  margin: 0;
+  padding-top: 10px;
+  color: var(--color-black);
+  text-align: center;
+  font-size: 21px;
+  font-family: var(--font-indieflower);
+}
+
 .wrapper .info .clock {
   width: var(--info-size);
   height: var(--info-size);
