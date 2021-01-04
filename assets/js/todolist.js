@@ -7,14 +7,16 @@ const check_btn = document.querySelector('#check');
 
 const TODO = 'toDoList';
 const items = JSON.parse(localStorage.getItem(TODO)) || [];
+const index = [];
 
 function handleCheck(e) {
   e.preventDefault();
-  if(!e.target.matches('.icon-circle-empty')) return;
-  const btn = e.target;
-  if(btn.className === 'icon-circle-empty') {
-    btn.className = 'icon-ok-circled'; 
-  } 
+  if(!e.target.matches('label')) return;
+  const btn = e.target.parentNode;
+  const btn_index = btn.dataset.index;
+  items[btn_index].done = !items[btn_index].done;
+  save();
+  updateToDo(items, toDoList);
 }
 
 function deleteToDo(e) {
@@ -24,25 +26,37 @@ function deleteToDo(e) {
   const li = btn.parentNode;
   const lis = li.parentNode;
   toDoList.removeChild(lis);
-  // const cleanToDos = items.filter(item => {
-  //   return item.id !== +(lis.id);
-  // });
-  // localStorage.setItem(TODO, JSON.stringify(cleanToDos));
+  for(let i=0; i<items.length; i++) {
+    if(items[i].id === lis.id) {
+      items.splice(i, 1);
+    }
+  }
+  localStorage.setItem(TODO, JSON.stringify(items));
 }
 
 function updateToDo(toDos = [], list) {
   list.innerHTML = toDos.map((toDo, i) => {
     return `
-      <li id=${i}>
-        <button type="button" id="check">
-          <i class="icon-circle-empty"></i>
-        </button>
+      <li id=${i} data-index=${i}>
+        <input type="checkbox" id="check" ${toDo.done? 'checked' : ''}>
+          <label for="check"></label>
         <div class="todo">${toDo.text}</div>
         <button type="button" id="delete">
           <i class="icon-cancel-circled"></i>
         </button>
       </li>`
   }).join('');
+  const ii = toDoList.querySelectorAll('li');
+  ii.forEach(item => 
+    index.push(item.dataset.index));
+  for (let i = 0; i < items.length; i++) {
+    items[i] = {...items[i], id: index[i]};
+  }
+  index.length = 0;
+}
+
+function save() {
+  localStorage.setItem(TODO, JSON.stringify(items));
 }
 
 function addItem(e) {
@@ -54,7 +68,7 @@ function addItem(e) {
   };
   items.push(item);
   updateToDo(items,toDoList);
-  localStorage.setItem(TODO, JSON.stringify(items));
+  save();
   toDo_input.value = "";
 }
 
